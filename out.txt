@@ -1,0 +1,838 @@
+2 uzduotis, 10 variantas. Laura Ukrinaite, 1 kursas, 5 grupe, 2 pogrupis.
+
+Salyga. Istirti, ar duotas N naturiniu skaiciu rinkinys gali buti suskirstytas i skaiciu trejetus taip, 
+kad skaiciu visuose trejetuose suma butu vienoda.
+Sprendimo ideja:
+1) Suskirstyti N dydzio aibes skaicius i trejetus taip, kad visu trejetu suma butu vienoda.
+2) Skaiciu kiekis N turi dalytis is 3, kitaip nebus imanoma suskirstyti i trejetus.
+3) Visu trejetu suma turi dalytis is trejetu skaiciaus N/3, kitaip nebus imanoma suskirstyti taip, kad sumos butu vienodos.
+4) Programa pasiima viena skaiciu is duomenu rinkinio ir bando ji patalpinti i viena is nepilnu trejetu.
+5) Jeigu trejetas yra uzpildytas, programa patikrina, ar jo suma tinkama.
+6) Jeigu tinkama, tai programa isspausdina skaiciu trejeta. Panaudoti skaiciai pasizymimi kaip panaudoti.
+7) Jei netinkama, tai programa toliau eina per skaicius ir iesko kito skaiciaus trejeto.
+
+PIRMA DALIS
+Ivesties failas: duom2.txt
+DUOMENYS:
+   s1 = 1
+   s2 = 2
+   s3 = 3
+   s4 = 4
+   s5 = 5
+   s6 = 6
+   s7 = 7
+   s8 = 8
+   s9 = 9
+Ivestas sprendiniu kiekis: 9
+Maximalus sprendiniu kiekis: 10
+
+ANTRA DALIS. Vykdymas
+       1) -I trejeta talpinamas X1: 1. [1]. Gilyn.
+       2) --I trejeta talpinamas X2: 2. [1, 2]. Gilyn. 
+       3) ---I trejeta talpinamas X3: 3. [1, 2, 3]. Netinkama suma.
+       4) ---I trejeta talpinamas X4: 4. [1, 2, 4]. Netinkama suma.
+       5) ---I trejeta talpinamas X5: 5. [1, 2, 5]. Netinkama suma.
+       6) ---I trejeta talpinamas X6: 6. [1, 2, 6]. Netinkama suma.
+       7) ---I trejeta talpinamas X7: 7. [1, 2, 7]. Netinkama suma.
+       8) ---I trejeta talpinamas X8: 8. [1, 2, 8]. Netinkama suma.
+       9) ---I trejeta talpinamas X9: 9. [1, 2, 9]. Netinkama suma.
+      10) --I trejeta talpinamas X3: 3. [1, 3]. Gilyn. 
+      11) ---I trejeta talpinamas X4: 4. [1, 3, 4]. Netinkama suma.
+      12) ---I trejeta talpinamas X5: 5. [1, 3, 5]. Netinkama suma.
+      13) ---I trejeta talpinamas X6: 6. [1, 3, 6]. Netinkama suma.
+      14) ---I trejeta talpinamas X7: 7. [1, 3, 7]. Netinkama suma.
+      15) ---I trejeta talpinamas X8: 8. [1, 3, 8]. Netinkama suma.
+      16) ---I trejeta talpinamas X9: 9. [1, 3, 9]. Netinkama suma.
+      17) --I trejeta talpinamas X4: 4. [1, 4]. Gilyn. 
+      18) ---I trejeta talpinamas X5: 5. [1, 4, 5]. Netinkama suma.
+      19) ---I trejeta talpinamas X6: 6. [1, 4, 6]. Netinkama suma.
+      20) ---I trejeta talpinamas X7: 7. [1, 4, 7]. Netinkama suma.
+      21) ---I trejeta talpinamas X8: 8. [1, 4, 8]. Netinkama suma.
+      22) ---I trejeta talpinamas X9: 9. [1, 4, 9]. Netinkama suma.
+      23) --I trejeta talpinamas X5: 5. [1, 5]. Gilyn. 
+      24) ---I trejeta talpinamas X6: 6. [1, 5, 6]. Netinkama suma.
+      25) ---I trejeta talpinamas X7: 7. [1, 5, 7]. Netinkama suma.
+      26) ---I trejeta talpinamas X8: 8. [1, 5, 8]. Netinkama suma.
+      27) ---I trejeta talpinamas X9: 9. [1, 5, 9]. Rasta. Gilyn. 
+      28) ----I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+      29) ----I trejeta talpinamas X2: 2. [2]. Gilyn.
+      30) -----I trejeta talpinamas X3: 3. [2, 3]. Gilyn. 
+      31) ------I trejeta talpinamas X4: 4. [2, 3, 4]. Netinkama suma.
+      32) ------I trejeta talpinamas X5: 5. [2, 3, 5]. Yra panaudotas skaicius.
+      33) ------I trejeta talpinamas X6: 6. [2, 3, 6]. Netinkama suma.
+      34) ------I trejeta talpinamas X7: 7. [2, 3, 7]. Netinkama suma.
+      35) ------I trejeta talpinamas X8: 8. [2, 3, 8]. Netinkama suma.
+      36) ------I trejeta talpinamas X9: 9. [2, 3, 9]. Yra panaudotas skaicius.
+      37) -----I trejeta talpinamas X4: 4. [2, 4]. Gilyn. 
+      38) ------I trejeta talpinamas X5: 5. [2, 4, 5]. Yra panaudotas skaicius.
+      39) ------I trejeta talpinamas X6: 6. [2, 4, 6]. Netinkama suma.
+      40) ------I trejeta talpinamas X7: 7. [2, 4, 7]. Netinkama suma.
+      41) ------I trejeta talpinamas X8: 8. [2, 4, 8]. Netinkama suma.
+      42) ------I trejeta talpinamas X9: 9. [2, 4, 9]. Yra panaudotas skaicius.
+      43) -----I trejeta talpinamas X5: 5. [2, 5]. Yra panaudotas skaicius. 
+      44) -----I trejeta talpinamas X6: 6. [2, 6]. Gilyn. 
+      45) ------I trejeta talpinamas X7: 7. [2, 6, 7]. Rasta. Gilyn. 
+      46) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+      47) -------I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+      48) -------I trejeta talpinamas X3: 3. [3]. Gilyn.
+      49) --------I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+      50) ---------I trejeta talpinamas X5: 5. [3, 4, 5]. Yra panaudotas skaicius.
+      51) ---------I trejeta talpinamas X6: 6. [3, 4, 6]. Yra panaudotas skaicius.
+      52) ---------I trejeta talpinamas X7: 7. [3, 4, 7]. Yra panaudotas skaicius.
+      53) ---------I trejeta talpinamas X8: 8. [3, 4, 8]. Rasta. Atgal. 
+      54) ------I trejeta talpinamas X8: 8. [2, 6, 8]. Netinkama suma.
+      55) ------I trejeta talpinamas X9: 9. [2, 6, 9]. Yra panaudotas skaicius.
+      56) -----I trejeta talpinamas X7: 7. [2, 7]. Gilyn. 
+      57) ------I trejeta talpinamas X8: 8. [2, 7, 8]. Netinkama suma.
+      58) ------I trejeta talpinamas X9: 9. [2, 7, 9]. Yra panaudotas skaicius.
+      59) -----I trejeta talpinamas X8: 8. [2, 8]. Gilyn. 
+      60) ------I trejeta talpinamas X9: 9. [2, 8, 9]. Yra panaudotas skaicius.
+      61) -----I trejeta talpinamas X9: 9. [2, 9]. Yra panaudotas skaicius. 
+      62) ----I trejeta talpinamas X3: 3. [3]. Gilyn.
+      63) -----I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+      64) ------I trejeta talpinamas X5: 5. [3, 4, 5]. Yra panaudotas skaicius.
+      65) ------I trejeta talpinamas X6: 6. [3, 4, 6]. Netinkama suma.
+      66) ------I trejeta talpinamas X7: 7. [3, 4, 7]. Netinkama suma.
+      67) ------I trejeta talpinamas X8: 8. [3, 4, 8]. Rasta. Gilyn. 
+      68) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+      69) -------I trejeta talpinamas X2: 2. [2]. Gilyn.
+      70) --------I trejeta talpinamas X3: 3. [2, 3]. Yra panaudotas skaicius. 
+      71) --------I trejeta talpinamas X4: 4. [2, 4]. Yra panaudotas skaicius. 
+      72) --------I trejeta talpinamas X5: 5. [2, 5]. Yra panaudotas skaicius. 
+      73) --------I trejeta talpinamas X6: 6. [2, 6]. Gilyn. 
+      74) ---------I trejeta talpinamas X7: 7. [2, 6, 7]. Rasta. Atgal. 
+      75) ------I trejeta talpinamas X9: 9. [3, 4, 9]. Yra panaudotas skaicius.
+      76) -----I trejeta talpinamas X5: 5. [3, 5]. Yra panaudotas skaicius. 
+      77) -----I trejeta talpinamas X6: 6. [3, 6]. Gilyn. 
+      78) ------I trejeta talpinamas X7: 7. [3, 6, 7]. Netinkama suma.
+      79) ------I trejeta talpinamas X8: 8. [3, 6, 8]. Netinkama suma.
+      80) ------I trejeta talpinamas X9: 9. [3, 6, 9]. Yra panaudotas skaicius.
+      81) -----I trejeta talpinamas X7: 7. [3, 7]. Gilyn. 
+      82) ------I trejeta talpinamas X8: 8. [3, 7, 8]. Netinkama suma.
+      83) ------I trejeta talpinamas X9: 9. [3, 7, 9]. Yra panaudotas skaicius.
+      84) -----I trejeta talpinamas X8: 8. [3, 8]. Gilyn. 
+      85) ------I trejeta talpinamas X9: 9. [3, 8, 9]. Yra panaudotas skaicius.
+      86) -----I trejeta talpinamas X9: 9. [3, 9]. Yra panaudotas skaicius. 
+      87) ----I trejeta talpinamas X4: 4. [4]. Gilyn.
+      88) -----I trejeta talpinamas X5: 5. [4, 5]. Yra panaudotas skaicius. 
+      89) -----I trejeta talpinamas X6: 6. [4, 6]. Gilyn. 
+      90) ------I trejeta talpinamas X7: 7. [4, 6, 7]. Netinkama suma.
+      91) ------I trejeta talpinamas X8: 8. [4, 6, 8]. Netinkama suma.
+      92) ------I trejeta talpinamas X9: 9. [4, 6, 9]. Yra panaudotas skaicius.
+      93) -----I trejeta talpinamas X7: 7. [4, 7]. Gilyn. 
+      94) ------I trejeta talpinamas X8: 8. [4, 7, 8]. Netinkama suma.
+      95) ------I trejeta talpinamas X9: 9. [4, 7, 9]. Yra panaudotas skaicius.
+      96) -----I trejeta talpinamas X8: 8. [4, 8]. Gilyn. 
+      97) ------I trejeta talpinamas X9: 9. [4, 8, 9]. Yra panaudotas skaicius.
+      98) -----I trejeta talpinamas X9: 9. [4, 9]. Yra panaudotas skaicius. 
+      99) ----I trejeta talpinamas X5: 5. [5]. Yra panaudotas skaicius. 
+     100) ----I trejeta talpinamas X6: 6. [6]. Gilyn.
+     101) -----I trejeta talpinamas X7: 7. [6, 7]. Gilyn. 
+     102) ------I trejeta talpinamas X8: 8. [6, 7, 8]. Netinkama suma.
+     103) ------I trejeta talpinamas X9: 9. [6, 7, 9]. Yra panaudotas skaicius.
+     104) -----I trejeta talpinamas X8: 8. [6, 8]. Gilyn. 
+     105) ------I trejeta talpinamas X9: 9. [6, 8, 9]. Yra panaudotas skaicius.
+     106) -----I trejeta talpinamas X9: 9. [6, 9]. Yra panaudotas skaicius. 
+     107) ----I trejeta talpinamas X7: 7. [7]. Gilyn.
+     108) -----I trejeta talpinamas X8: 8. [7, 8]. Gilyn. 
+     109) ------I trejeta talpinamas X9: 9. [7, 8, 9]. Yra panaudotas skaicius.
+     110) -----I trejeta talpinamas X9: 9. [7, 9]. Yra panaudotas skaicius. 
+     111) ----I trejeta talpinamas X8: 8. [8]. Gilyn.
+     112) -----I trejeta talpinamas X9: 9. [8, 9]. Yra panaudotas skaicius. 
+     113) ----I trejeta talpinamas X9: 9. [9]. Yra panaudotas skaicius. 
+     114) --I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     115) ---I trejeta talpinamas X7: 7. [1, 6, 7]. Netinkama suma.
+     116) ---I trejeta talpinamas X8: 8. [1, 6, 8]. Rasta. Gilyn. 
+     117) ----I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     118) ----I trejeta talpinamas X2: 2. [2]. Gilyn.
+     119) -----I trejeta talpinamas X3: 3. [2, 3]. Gilyn. 
+     120) ------I trejeta talpinamas X4: 4. [2, 3, 4]. Netinkama suma.
+     121) ------I trejeta talpinamas X5: 5. [2, 3, 5]. Netinkama suma.
+     122) ------I trejeta talpinamas X6: 6. [2, 3, 6]. Yra panaudotas skaicius.
+     123) ------I trejeta talpinamas X7: 7. [2, 3, 7]. Netinkama suma.
+     124) ------I trejeta talpinamas X8: 8. [2, 3, 8]. Yra panaudotas skaicius.
+     125) ------I trejeta talpinamas X9: 9. [2, 3, 9]. Netinkama suma.
+     126) -----I trejeta talpinamas X4: 4. [2, 4]. Gilyn. 
+     127) ------I trejeta talpinamas X5: 5. [2, 4, 5]. Netinkama suma.
+     128) ------I trejeta talpinamas X6: 6. [2, 4, 6]. Yra panaudotas skaicius.
+     129) ------I trejeta talpinamas X7: 7. [2, 4, 7]. Netinkama suma.
+     130) ------I trejeta talpinamas X8: 8. [2, 4, 8]. Yra panaudotas skaicius.
+     131) ------I trejeta talpinamas X9: 9. [2, 4, 9]. Rasta. Gilyn. 
+     132) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     133) -------I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+     134) -------I trejeta talpinamas X3: 3. [3]. Gilyn.
+     135) --------I trejeta talpinamas X4: 4. [3, 4]. Yra panaudotas skaicius. 
+     136) --------I trejeta talpinamas X5: 5. [3, 5]. Gilyn. 
+     137) ---------I trejeta talpinamas X6: 6. [3, 5, 6]. Yra panaudotas skaicius.
+     138) ---------I trejeta talpinamas X7: 7. [3, 5, 7]. Rasta. Atgal. 
+     139) -----I trejeta talpinamas X5: 5. [2, 5]. Gilyn. 
+     140) ------I trejeta talpinamas X6: 6. [2, 5, 6]. Yra panaudotas skaicius.
+     141) ------I trejeta talpinamas X7: 7. [2, 5, 7]. Netinkama suma.
+     142) ------I trejeta talpinamas X8: 8. [2, 5, 8]. Yra panaudotas skaicius.
+     143) ------I trejeta talpinamas X9: 9. [2, 5, 9]. Netinkama suma.
+     144) -----I trejeta talpinamas X6: 6. [2, 6]. Yra panaudotas skaicius. 
+     145) -----I trejeta talpinamas X7: 7. [2, 7]. Gilyn. 
+     146) ------I trejeta talpinamas X8: 8. [2, 7, 8]. Yra panaudotas skaicius.
+     147) ------I trejeta talpinamas X9: 9. [2, 7, 9]. Netinkama suma.
+     148) -----I trejeta talpinamas X8: 8. [2, 8]. Yra panaudotas skaicius. 
+     149) -----I trejeta talpinamas X9: 9. [2, 9]. Gilyn. 
+     150) ----I trejeta talpinamas X3: 3. [3]. Gilyn.
+     151) -----I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+     152) ------I trejeta talpinamas X5: 5. [3, 4, 5]. Netinkama suma.
+     153) ------I trejeta talpinamas X6: 6. [3, 4, 6]. Yra panaudotas skaicius.
+     154) ------I trejeta talpinamas X7: 7. [3, 4, 7]. Netinkama suma.
+     155) ------I trejeta talpinamas X8: 8. [3, 4, 8]. Yra panaudotas skaicius.
+     156) ------I trejeta talpinamas X9: 9. [3, 4, 9]. Netinkama suma.
+     157) -----I trejeta talpinamas X5: 5. [3, 5]. Gilyn. 
+     158) ------I trejeta talpinamas X6: 6. [3, 5, 6]. Yra panaudotas skaicius.
+     159) ------I trejeta talpinamas X7: 7. [3, 5, 7]. Rasta. Gilyn. 
+     160) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     161) -------I trejeta talpinamas X2: 2. [2]. Gilyn.
+     162) --------I trejeta talpinamas X3: 3. [2, 3]. Yra panaudotas skaicius. 
+     163) --------I trejeta talpinamas X4: 4. [2, 4]. Gilyn. 
+     164) ---------I trejeta talpinamas X5: 5. [2, 4, 5]. Yra panaudotas skaicius.
+     165) ---------I trejeta talpinamas X6: 6. [2, 4, 6]. Yra panaudotas skaicius.
+     166) ---------I trejeta talpinamas X7: 7. [2, 4, 7]. Yra panaudotas skaicius.
+     167) ---------I trejeta talpinamas X8: 8. [2, 4, 8]. Yra panaudotas skaicius.
+     168) ---------I trejeta talpinamas X9: 9. [2, 4, 9]. Rasta. Atgal. 
+     169) ------I trejeta talpinamas X8: 8. [3, 5, 8]. Yra panaudotas skaicius.
+     170) ------I trejeta talpinamas X9: 9. [3, 5, 9]. Netinkama suma.
+     171) -----I trejeta talpinamas X6: 6. [3, 6]. Yra panaudotas skaicius. 
+     172) -----I trejeta talpinamas X7: 7. [3, 7]. Gilyn. 
+     173) ------I trejeta talpinamas X8: 8. [3, 7, 8]. Yra panaudotas skaicius.
+     174) ------I trejeta talpinamas X9: 9. [3, 7, 9]. Netinkama suma.
+     175) -----I trejeta talpinamas X8: 8. [3, 8]. Yra panaudotas skaicius. 
+     176) -----I trejeta talpinamas X9: 9. [3, 9]. Gilyn. 
+     177) ----I trejeta talpinamas X4: 4. [4]. Gilyn.
+     178) -----I trejeta talpinamas X5: 5. [4, 5]. Gilyn. 
+     179) ------I trejeta talpinamas X6: 6. [4, 5, 6]. Yra panaudotas skaicius.
+     180) ------I trejeta talpinamas X7: 7. [4, 5, 7]. Netinkama suma.
+     181) ------I trejeta talpinamas X8: 8. [4, 5, 8]. Yra panaudotas skaicius.
+     182) ------I trejeta talpinamas X9: 9. [4, 5, 9]. Netinkama suma.
+     183) -----I trejeta talpinamas X6: 6. [4, 6]. Yra panaudotas skaicius. 
+     184) -----I trejeta talpinamas X7: 7. [4, 7]. Gilyn. 
+     185) ------I trejeta talpinamas X8: 8. [4, 7, 8]. Yra panaudotas skaicius.
+     186) ------I trejeta talpinamas X9: 9. [4, 7, 9]. Netinkama suma.
+     187) -----I trejeta talpinamas X8: 8. [4, 8]. Yra panaudotas skaicius. 
+     188) -----I trejeta talpinamas X9: 9. [4, 9]. Gilyn. 
+     189) ----I trejeta talpinamas X5: 5. [5]. Gilyn.
+     190) -----I trejeta talpinamas X6: 6. [5, 6]. Yra panaudotas skaicius. 
+     191) -----I trejeta talpinamas X7: 7. [5, 7]. Gilyn. 
+     192) ------I trejeta talpinamas X8: 8. [5, 7, 8]. Yra panaudotas skaicius.
+     193) ------I trejeta talpinamas X9: 9. [5, 7, 9]. Netinkama suma.
+     194) -----I trejeta talpinamas X8: 8. [5, 8]. Yra panaudotas skaicius. 
+     195) -----I trejeta talpinamas X9: 9. [5, 9]. Gilyn. 
+     196) ----I trejeta talpinamas X6: 6. [6]. Yra panaudotas skaicius. 
+     197) ----I trejeta talpinamas X7: 7. [7]. Gilyn.
+     198) -----I trejeta talpinamas X8: 8. [7, 8]. Yra panaudotas skaicius. 
+     199) -----I trejeta talpinamas X9: 9. [7, 9]. Gilyn. 
+     200) ----I trejeta talpinamas X8: 8. [8]. Yra panaudotas skaicius. 
+     201) ----I trejeta talpinamas X9: 9. [9]. Gilyn.
+     202) ---I trejeta talpinamas X9: 9. [1, 6, 9]. Netinkama suma.
+     203) --I trejeta talpinamas X7: 7. [1, 7]. Gilyn. 
+     204) ---I trejeta talpinamas X8: 8. [1, 7, 8]. Netinkama suma.
+     205) ---I trejeta talpinamas X9: 9. [1, 7, 9]. Netinkama suma.
+     206) --I trejeta talpinamas X8: 8. [1, 8]. Gilyn. 
+     207) ---I trejeta talpinamas X9: 9. [1, 8, 9]. Netinkama suma.
+     208) --I trejeta talpinamas X9: 9. [1, 9]. Gilyn. 
+     209) -I trejeta talpinamas X2: 2. [2]. Gilyn.
+     210) --I trejeta talpinamas X3: 3. [2, 3]. Gilyn. 
+     211) ---I trejeta talpinamas X4: 4. [2, 3, 4]. Netinkama suma.
+     212) ---I trejeta talpinamas X5: 5. [2, 3, 5]. Netinkama suma.
+     213) ---I trejeta talpinamas X6: 6. [2, 3, 6]. Netinkama suma.
+     214) ---I trejeta talpinamas X7: 7. [2, 3, 7]. Netinkama suma.
+     215) ---I trejeta talpinamas X8: 8. [2, 3, 8]. Netinkama suma.
+     216) ---I trejeta talpinamas X9: 9. [2, 3, 9]. Netinkama suma.
+     217) --I trejeta talpinamas X4: 4. [2, 4]. Gilyn. 
+     218) ---I trejeta talpinamas X5: 5. [2, 4, 5]. Netinkama suma.
+     219) ---I trejeta talpinamas X6: 6. [2, 4, 6]. Netinkama suma.
+     220) ---I trejeta talpinamas X7: 7. [2, 4, 7]. Netinkama suma.
+     221) ---I trejeta talpinamas X8: 8. [2, 4, 8]. Netinkama suma.
+     222) ---I trejeta talpinamas X9: 9. [2, 4, 9]. Rasta. Gilyn. 
+     223) ----I trejeta talpinamas X1: 1. [1]. Gilyn.
+     224) -----I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     225) -----I trejeta talpinamas X3: 3. [1, 3]. Gilyn. 
+     226) ------I trejeta talpinamas X4: 4. [1, 3, 4]. Yra panaudotas skaicius.
+     227) ------I trejeta talpinamas X5: 5. [1, 3, 5]. Netinkama suma.
+     228) ------I trejeta talpinamas X6: 6. [1, 3, 6]. Netinkama suma.
+     229) ------I trejeta talpinamas X7: 7. [1, 3, 7]. Netinkama suma.
+     230) ------I trejeta talpinamas X8: 8. [1, 3, 8]. Netinkama suma.
+     231) ------I trejeta talpinamas X9: 9. [1, 3, 9]. Yra panaudotas skaicius.
+     232) -----I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     233) -----I trejeta talpinamas X5: 5. [1, 5]. Gilyn. 
+     234) ------I trejeta talpinamas X6: 6. [1, 5, 6]. Netinkama suma.
+     235) ------I trejeta talpinamas X7: 7. [1, 5, 7]. Netinkama suma.
+     236) ------I trejeta talpinamas X8: 8. [1, 5, 8]. Netinkama suma.
+     237) ------I trejeta talpinamas X9: 9. [1, 5, 9]. Yra panaudotas skaicius.
+     238) -----I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     239) ------I trejeta talpinamas X7: 7. [1, 6, 7]. Netinkama suma.
+     240) ------I trejeta talpinamas X8: 8. [1, 6, 8]. Rasta. Gilyn. 
+     241) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     242) -------I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+     243) -------I trejeta talpinamas X3: 3. [3]. Gilyn.
+     244) --------I trejeta talpinamas X4: 4. [3, 4]. Yra panaudotas skaicius. 
+     245) --------I trejeta talpinamas X5: 5. [3, 5]. Gilyn. 
+     246) ---------I trejeta talpinamas X6: 6. [3, 5, 6]. Yra panaudotas skaicius.
+     247) ---------I trejeta talpinamas X7: 7. [3, 5, 7]. Rasta. Atgal. 
+     248) ------I trejeta talpinamas X9: 9. [1, 6, 9]. Yra panaudotas skaicius.
+     249) -----I trejeta talpinamas X7: 7. [1, 7]. Gilyn. 
+     250) ------I trejeta talpinamas X8: 8. [1, 7, 8]. Netinkama suma.
+     251) ------I trejeta talpinamas X9: 9. [1, 7, 9]. Yra panaudotas skaicius.
+     252) -----I trejeta talpinamas X8: 8. [1, 8]. Gilyn. 
+     253) ------I trejeta talpinamas X9: 9. [1, 8, 9]. Yra panaudotas skaicius.
+     254) -----I trejeta talpinamas X9: 9. [1, 9]. Yra panaudotas skaicius. 
+     255) ----I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+     256) ----I trejeta talpinamas X3: 3. [3]. Gilyn.
+     257) -----I trejeta talpinamas X4: 4. [3, 4]. Yra panaudotas skaicius. 
+     258) -----I trejeta talpinamas X5: 5. [3, 5]. Gilyn. 
+     259) ------I trejeta talpinamas X6: 6. [3, 5, 6]. Netinkama suma.
+     260) ------I trejeta talpinamas X7: 7. [3, 5, 7]. Rasta. Gilyn. 
+     261) -------I trejeta talpinamas X1: 1. [1]. Gilyn.
+     262) --------I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     263) --------I trejeta talpinamas X3: 3. [1, 3]. Yra panaudotas skaicius. 
+     264) --------I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     265) --------I trejeta talpinamas X5: 5. [1, 5]. Yra panaudotas skaicius. 
+     266) --------I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     267) ---------I trejeta talpinamas X7: 7. [1, 6, 7]. Yra panaudotas skaicius.
+     268) ---------I trejeta talpinamas X8: 8. [1, 6, 8]. Rasta. Atgal. 
+     269) ------I trejeta talpinamas X8: 8. [3, 5, 8]. Netinkama suma.
+     270) ------I trejeta talpinamas X9: 9. [3, 5, 9]. Yra panaudotas skaicius.
+     271) -----I trejeta talpinamas X6: 6. [3, 6]. Gilyn. 
+     272) ------I trejeta talpinamas X7: 7. [3, 6, 7]. Netinkama suma.
+     273) ------I trejeta talpinamas X8: 8. [3, 6, 8]. Netinkama suma.
+     274) ------I trejeta talpinamas X9: 9. [3, 6, 9]. Yra panaudotas skaicius.
+     275) -----I trejeta talpinamas X7: 7. [3, 7]. Gilyn. 
+     276) ------I trejeta talpinamas X8: 8. [3, 7, 8]. Netinkama suma.
+     277) ------I trejeta talpinamas X9: 9. [3, 7, 9]. Yra panaudotas skaicius.
+     278) -----I trejeta talpinamas X8: 8. [3, 8]. Gilyn. 
+     279) ------I trejeta talpinamas X9: 9. [3, 8, 9]. Yra panaudotas skaicius.
+     280) -----I trejeta talpinamas X9: 9. [3, 9]. Yra panaudotas skaicius. 
+     281) ----I trejeta talpinamas X4: 4. [4]. Yra panaudotas skaicius. 
+     282) ----I trejeta talpinamas X5: 5. [5]. Gilyn.
+     283) -----I trejeta talpinamas X6: 6. [5, 6]. Gilyn. 
+     284) ------I trejeta talpinamas X7: 7. [5, 6, 7]. Netinkama suma.
+     285) ------I trejeta talpinamas X8: 8. [5, 6, 8]. Netinkama suma.
+     286) ------I trejeta talpinamas X9: 9. [5, 6, 9]. Yra panaudotas skaicius.
+     287) -----I trejeta talpinamas X7: 7. [5, 7]. Gilyn. 
+     288) ------I trejeta talpinamas X8: 8. [5, 7, 8]. Netinkama suma.
+     289) ------I trejeta talpinamas X9: 9. [5, 7, 9]. Yra panaudotas skaicius.
+     290) -----I trejeta talpinamas X8: 8. [5, 8]. Gilyn. 
+     291) ------I trejeta talpinamas X9: 9. [5, 8, 9]. Yra panaudotas skaicius.
+     292) -----I trejeta talpinamas X9: 9. [5, 9]. Yra panaudotas skaicius. 
+     293) ----I trejeta talpinamas X6: 6. [6]. Gilyn.
+     294) -----I trejeta talpinamas X7: 7. [6, 7]. Gilyn. 
+     295) ------I trejeta talpinamas X8: 8. [6, 7, 8]. Netinkama suma.
+     296) ------I trejeta talpinamas X9: 9. [6, 7, 9]. Yra panaudotas skaicius.
+     297) -----I trejeta talpinamas X8: 8. [6, 8]. Gilyn. 
+     298) ------I trejeta talpinamas X9: 9. [6, 8, 9]. Yra panaudotas skaicius.
+     299) -----I trejeta talpinamas X9: 9. [6, 9]. Yra panaudotas skaicius. 
+     300) ----I trejeta talpinamas X7: 7. [7]. Gilyn.
+     301) -----I trejeta talpinamas X8: 8. [7, 8]. Gilyn. 
+     302) ------I trejeta talpinamas X9: 9. [7, 8, 9]. Yra panaudotas skaicius.
+     303) -----I trejeta talpinamas X9: 9. [7, 9]. Yra panaudotas skaicius. 
+     304) ----I trejeta talpinamas X8: 8. [8]. Gilyn.
+     305) -----I trejeta talpinamas X9: 9. [8, 9]. Yra panaudotas skaicius. 
+     306) ----I trejeta talpinamas X9: 9. [9]. Yra panaudotas skaicius. 
+     307) --I trejeta talpinamas X5: 5. [2, 5]. Gilyn. 
+     308) ---I trejeta talpinamas X6: 6. [2, 5, 6]. Netinkama suma.
+     309) ---I trejeta talpinamas X7: 7. [2, 5, 7]. Netinkama suma.
+     310) ---I trejeta talpinamas X8: 8. [2, 5, 8]. Rasta. Gilyn. 
+     311) ----I trejeta talpinamas X1: 1. [1]. Gilyn.
+     312) -----I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     313) -----I trejeta talpinamas X3: 3. [1, 3]. Gilyn. 
+     314) ------I trejeta talpinamas X4: 4. [1, 3, 4]. Netinkama suma.
+     315) ------I trejeta talpinamas X5: 5. [1, 3, 5]. Yra panaudotas skaicius.
+     316) ------I trejeta talpinamas X6: 6. [1, 3, 6]. Netinkama suma.
+     317) ------I trejeta talpinamas X7: 7. [1, 3, 7]. Netinkama suma.
+     318) ------I trejeta talpinamas X8: 8. [1, 3, 8]. Yra panaudotas skaicius.
+     319) ------I trejeta talpinamas X9: 9. [1, 3, 9]. Netinkama suma.
+     320) -----I trejeta talpinamas X4: 4. [1, 4]. Gilyn. 
+     321) ------I trejeta talpinamas X5: 5. [1, 4, 5]. Yra panaudotas skaicius.
+     322) ------I trejeta talpinamas X6: 6. [1, 4, 6]. Netinkama suma.
+     323) ------I trejeta talpinamas X7: 7. [1, 4, 7]. Netinkama suma.
+     324) ------I trejeta talpinamas X8: 8. [1, 4, 8]. Yra panaudotas skaicius.
+     325) ------I trejeta talpinamas X9: 9. [1, 4, 9]. Netinkama suma.
+     326) -----I trejeta talpinamas X5: 5. [1, 5]. Yra panaudotas skaicius. 
+     327) -----I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     328) ------I trejeta talpinamas X7: 7. [1, 6, 7]. Netinkama suma.
+     329) ------I trejeta talpinamas X8: 8. [1, 6, 8]. Yra panaudotas skaicius.
+     330) ------I trejeta talpinamas X9: 9. [1, 6, 9]. Netinkama suma.
+     331) -----I trejeta talpinamas X7: 7. [1, 7]. Gilyn. 
+     332) ------I trejeta talpinamas X8: 8. [1, 7, 8]. Yra panaudotas skaicius.
+     333) ------I trejeta talpinamas X9: 9. [1, 7, 9]. Netinkama suma.
+     334) -----I trejeta talpinamas X8: 8. [1, 8]. Yra panaudotas skaicius. 
+     335) -----I trejeta talpinamas X9: 9. [1, 9]. Gilyn. 
+     336) ----I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+     337) ----I trejeta talpinamas X3: 3. [3]. Gilyn.
+     338) -----I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+     339) ------I trejeta talpinamas X5: 5. [3, 4, 5]. Yra panaudotas skaicius.
+     340) ------I trejeta talpinamas X6: 6. [3, 4, 6]. Netinkama suma.
+     341) ------I trejeta talpinamas X7: 7. [3, 4, 7]. Netinkama suma.
+     342) ------I trejeta talpinamas X8: 8. [3, 4, 8]. Yra panaudotas skaicius.
+     343) ------I trejeta talpinamas X9: 9. [3, 4, 9]. Netinkama suma.
+     344) -----I trejeta talpinamas X5: 5. [3, 5]. Yra panaudotas skaicius. 
+     345) -----I trejeta talpinamas X6: 6. [3, 6]. Gilyn. 
+     346) ------I trejeta talpinamas X7: 7. [3, 6, 7]. Netinkama suma.
+     347) ------I trejeta talpinamas X8: 8. [3, 6, 8]. Yra panaudotas skaicius.
+     348) ------I trejeta talpinamas X9: 9. [3, 6, 9]. Netinkama suma.
+     349) -----I trejeta talpinamas X7: 7. [3, 7]. Gilyn. 
+     350) ------I trejeta talpinamas X8: 8. [3, 7, 8]. Yra panaudotas skaicius.
+     351) ------I trejeta talpinamas X9: 9. [3, 7, 9]. Netinkama suma.
+     352) -----I trejeta talpinamas X8: 8. [3, 8]. Yra panaudotas skaicius. 
+     353) -----I trejeta talpinamas X9: 9. [3, 9]. Gilyn. 
+     354) ----I trejeta talpinamas X4: 4. [4]. Gilyn.
+     355) -----I trejeta talpinamas X5: 5. [4, 5]. Yra panaudotas skaicius. 
+     356) -----I trejeta talpinamas X6: 6. [4, 6]. Gilyn. 
+     357) ------I trejeta talpinamas X7: 7. [4, 6, 7]. Netinkama suma.
+     358) ------I trejeta talpinamas X8: 8. [4, 6, 8]. Yra panaudotas skaicius.
+     359) ------I trejeta talpinamas X9: 9. [4, 6, 9]. Netinkama suma.
+     360) -----I trejeta talpinamas X7: 7. [4, 7]. Gilyn. 
+     361) ------I trejeta talpinamas X8: 8. [4, 7, 8]. Yra panaudotas skaicius.
+     362) ------I trejeta talpinamas X9: 9. [4, 7, 9]. Netinkama suma.
+     363) -----I trejeta talpinamas X8: 8. [4, 8]. Yra panaudotas skaicius. 
+     364) -----I trejeta talpinamas X9: 9. [4, 9]. Gilyn. 
+     365) ----I trejeta talpinamas X5: 5. [5]. Yra panaudotas skaicius. 
+     366) ----I trejeta talpinamas X6: 6. [6]. Gilyn.
+     367) -----I trejeta talpinamas X7: 7. [6, 7]. Gilyn. 
+     368) ------I trejeta talpinamas X8: 8. [6, 7, 8]. Yra panaudotas skaicius.
+     369) ------I trejeta talpinamas X9: 9. [6, 7, 9]. Netinkama suma.
+     370) -----I trejeta talpinamas X8: 8. [6, 8]. Yra panaudotas skaicius. 
+     371) -----I trejeta talpinamas X9: 9. [6, 9]. Gilyn. 
+     372) ----I trejeta talpinamas X7: 7. [7]. Gilyn.
+     373) -----I trejeta talpinamas X8: 8. [7, 8]. Yra panaudotas skaicius. 
+     374) -----I trejeta talpinamas X9: 9. [7, 9]. Gilyn. 
+     375) ----I trejeta talpinamas X8: 8. [8]. Yra panaudotas skaicius. 
+     376) ----I trejeta talpinamas X9: 9. [9]. Gilyn.
+     377) ---I trejeta talpinamas X9: 9. [2, 5, 9]. Netinkama suma.
+     378) --I trejeta talpinamas X6: 6. [2, 6]. Gilyn. 
+     379) ---I trejeta talpinamas X7: 7. [2, 6, 7]. Rasta. Gilyn. 
+     380) ----I trejeta talpinamas X1: 1. [1]. Gilyn.
+     381) -----I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     382) -----I trejeta talpinamas X3: 3. [1, 3]. Gilyn. 
+     383) ------I trejeta talpinamas X4: 4. [1, 3, 4]. Netinkama suma.
+     384) ------I trejeta talpinamas X5: 5. [1, 3, 5]. Netinkama suma.
+     385) ------I trejeta talpinamas X6: 6. [1, 3, 6]. Yra panaudotas skaicius.
+     386) ------I trejeta talpinamas X7: 7. [1, 3, 7]. Yra panaudotas skaicius.
+     387) ------I trejeta talpinamas X8: 8. [1, 3, 8]. Netinkama suma.
+     388) ------I trejeta talpinamas X9: 9. [1, 3, 9]. Netinkama suma.
+     389) -----I trejeta talpinamas X4: 4. [1, 4]. Gilyn. 
+     390) ------I trejeta talpinamas X5: 5. [1, 4, 5]. Netinkama suma.
+     391) ------I trejeta talpinamas X6: 6. [1, 4, 6]. Yra panaudotas skaicius.
+     392) ------I trejeta talpinamas X7: 7. [1, 4, 7]. Yra panaudotas skaicius.
+     393) ------I trejeta talpinamas X8: 8. [1, 4, 8]. Netinkama suma.
+     394) ------I trejeta talpinamas X9: 9. [1, 4, 9]. Netinkama suma.
+     395) -----I trejeta talpinamas X5: 5. [1, 5]. Gilyn. 
+     396) ------I trejeta talpinamas X6: 6. [1, 5, 6]. Yra panaudotas skaicius.
+     397) ------I trejeta talpinamas X7: 7. [1, 5, 7]. Yra panaudotas skaicius.
+     398) ------I trejeta talpinamas X8: 8. [1, 5, 8]. Netinkama suma.
+     399) ------I trejeta talpinamas X9: 9. [1, 5, 9]. Rasta. Gilyn. 
+     400) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     401) -------I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+     402) -------I trejeta talpinamas X3: 3. [3]. Gilyn.
+     403) --------I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+     404) ---------I trejeta talpinamas X5: 5. [3, 4, 5]. Yra panaudotas skaicius.
+     405) ---------I trejeta talpinamas X6: 6. [3, 4, 6]. Yra panaudotas skaicius.
+     406) ---------I trejeta talpinamas X7: 7. [3, 4, 7]. Yra panaudotas skaicius.
+     407) ---------I trejeta talpinamas X8: 8. [3, 4, 8]. Rasta. Atgal. 
+     408) -----I trejeta talpinamas X6: 6. [1, 6]. Yra panaudotas skaicius. 
+     409) -----I trejeta talpinamas X7: 7. [1, 7]. Yra panaudotas skaicius. 
+     410) -----I trejeta talpinamas X8: 8. [1, 8]. Gilyn. 
+     411) ------I trejeta talpinamas X9: 9. [1, 8, 9]. Netinkama suma.
+     412) -----I trejeta talpinamas X9: 9. [1, 9]. Gilyn. 
+     413) ----I trejeta talpinamas X2: 2. [2]. Yra panaudotas skaicius. 
+     414) ----I trejeta talpinamas X3: 3. [3]. Gilyn.
+     415) -----I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+     416) ------I trejeta talpinamas X5: 5. [3, 4, 5]. Netinkama suma.
+     417) ------I trejeta talpinamas X6: 6. [3, 4, 6]. Yra panaudotas skaicius.
+     418) ------I trejeta talpinamas X7: 7. [3, 4, 7]. Yra panaudotas skaicius.
+     419) ------I trejeta talpinamas X8: 8. [3, 4, 8]. Rasta. Gilyn. 
+     420) -------I trejeta talpinamas X1: 1. [1]. Gilyn.
+     421) --------I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     422) --------I trejeta talpinamas X3: 3. [1, 3]. Yra panaudotas skaicius. 
+     423) --------I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     424) --------I trejeta talpinamas X5: 5. [1, 5]. Gilyn. 
+     425) ---------I trejeta talpinamas X6: 6. [1, 5, 6]. Yra panaudotas skaicius.
+     426) ---------I trejeta talpinamas X7: 7. [1, 5, 7]. Yra panaudotas skaicius.
+     427) ---------I trejeta talpinamas X8: 8. [1, 5, 8]. Yra panaudotas skaicius.
+     428) ---------I trejeta talpinamas X9: 9. [1, 5, 9]. Rasta. Atgal. 
+     429) ------I trejeta talpinamas X9: 9. [3, 4, 9]. Netinkama suma.
+     430) -----I trejeta talpinamas X5: 5. [3, 5]. Gilyn. 
+     431) ------I trejeta talpinamas X6: 6. [3, 5, 6]. Yra panaudotas skaicius.
+     432) ------I trejeta talpinamas X7: 7. [3, 5, 7]. Yra panaudotas skaicius.
+     433) ------I trejeta talpinamas X8: 8. [3, 5, 8]. Netinkama suma.
+     434) ------I trejeta talpinamas X9: 9. [3, 5, 9]. Netinkama suma.
+     435) -----I trejeta talpinamas X6: 6. [3, 6]. Yra panaudotas skaicius. 
+     436) -----I trejeta talpinamas X7: 7. [3, 7]. Yra panaudotas skaicius. 
+     437) -----I trejeta talpinamas X8: 8. [3, 8]. Gilyn. 
+     438) ------I trejeta talpinamas X9: 9. [3, 8, 9]. Netinkama suma.
+     439) -----I trejeta talpinamas X9: 9. [3, 9]. Gilyn. 
+     440) ----I trejeta talpinamas X4: 4. [4]. Gilyn.
+     441) -----I trejeta talpinamas X5: 5. [4, 5]. Gilyn. 
+     442) ------I trejeta talpinamas X6: 6. [4, 5, 6]. Yra panaudotas skaicius.
+     443) ------I trejeta talpinamas X7: 7. [4, 5, 7]. Yra panaudotas skaicius.
+     444) ------I trejeta talpinamas X8: 8. [4, 5, 8]. Netinkama suma.
+     445) ------I trejeta talpinamas X9: 9. [4, 5, 9]. Netinkama suma.
+     446) -----I trejeta talpinamas X6: 6. [4, 6]. Yra panaudotas skaicius. 
+     447) -----I trejeta talpinamas X7: 7. [4, 7]. Yra panaudotas skaicius. 
+     448) -----I trejeta talpinamas X8: 8. [4, 8]. Gilyn. 
+     449) ------I trejeta talpinamas X9: 9. [4, 8, 9]. Netinkama suma.
+     450) -----I trejeta talpinamas X9: 9. [4, 9]. Gilyn. 
+     451) ----I trejeta talpinamas X5: 5. [5]. Gilyn.
+     452) -----I trejeta talpinamas X6: 6. [5, 6]. Yra panaudotas skaicius. 
+     453) -----I trejeta talpinamas X7: 7. [5, 7]. Yra panaudotas skaicius. 
+     454) -----I trejeta talpinamas X8: 8. [5, 8]. Gilyn. 
+     455) ------I trejeta talpinamas X9: 9. [5, 8, 9]. Netinkama suma.
+     456) -----I trejeta talpinamas X9: 9. [5, 9]. Gilyn. 
+     457) ----I trejeta talpinamas X6: 6. [6]. Yra panaudotas skaicius. 
+     458) ----I trejeta talpinamas X7: 7. [7]. Yra panaudotas skaicius. 
+     459) ----I trejeta talpinamas X8: 8. [8]. Gilyn.
+     460) -----I trejeta talpinamas X9: 9. [8, 9]. Gilyn. 
+     461) ----I trejeta talpinamas X9: 9. [9]. Gilyn.
+     462) ---I trejeta talpinamas X8: 8. [2, 6, 8]. Netinkama suma.
+     463) ---I trejeta talpinamas X9: 9. [2, 6, 9]. Netinkama suma.
+     464) --I trejeta talpinamas X7: 7. [2, 7]. Gilyn. 
+     465) ---I trejeta talpinamas X8: 8. [2, 7, 8]. Netinkama suma.
+     466) ---I trejeta talpinamas X9: 9. [2, 7, 9]. Netinkama suma.
+     467) --I trejeta talpinamas X8: 8. [2, 8]. Gilyn. 
+     468) ---I trejeta talpinamas X9: 9. [2, 8, 9]. Netinkama suma.
+     469) --I trejeta talpinamas X9: 9. [2, 9]. Gilyn. 
+     470) -I trejeta talpinamas X3: 3. [3]. Gilyn.
+     471) --I trejeta talpinamas X4: 4. [3, 4]. Gilyn. 
+     472) ---I trejeta talpinamas X5: 5. [3, 4, 5]. Netinkama suma.
+     473) ---I trejeta talpinamas X6: 6. [3, 4, 6]. Netinkama suma.
+     474) ---I trejeta talpinamas X7: 7. [3, 4, 7]. Netinkama suma.
+     475) ---I trejeta talpinamas X8: 8. [3, 4, 8]. Rasta. Gilyn. 
+     476) ----I trejeta talpinamas X1: 1. [1]. Gilyn.
+     477) -----I trejeta talpinamas X2: 2. [1, 2]. Gilyn. 
+     478) ------I trejeta talpinamas X3: 3. [1, 2, 3]. Yra panaudotas skaicius.
+     479) ------I trejeta talpinamas X4: 4. [1, 2, 4]. Yra panaudotas skaicius.
+     480) ------I trejeta talpinamas X5: 5. [1, 2, 5]. Netinkama suma.
+     481) ------I trejeta talpinamas X6: 6. [1, 2, 6]. Netinkama suma.
+     482) ------I trejeta talpinamas X7: 7. [1, 2, 7]. Netinkama suma.
+     483) ------I trejeta talpinamas X8: 8. [1, 2, 8]. Yra panaudotas skaicius.
+     484) ------I trejeta talpinamas X9: 9. [1, 2, 9]. Netinkama suma.
+     485) -----I trejeta talpinamas X3: 3. [1, 3]. Yra panaudotas skaicius. 
+     486) -----I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     487) -----I trejeta talpinamas X5: 5. [1, 5]. Gilyn. 
+     488) ------I trejeta talpinamas X6: 6. [1, 5, 6]. Netinkama suma.
+     489) ------I trejeta talpinamas X7: 7. [1, 5, 7]. Netinkama suma.
+     490) ------I trejeta talpinamas X8: 8. [1, 5, 8]. Yra panaudotas skaicius.
+     491) ------I trejeta talpinamas X9: 9. [1, 5, 9]. Rasta. Gilyn. 
+     492) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     493) -------I trejeta talpinamas X2: 2. [2]. Gilyn.
+     494) --------I trejeta talpinamas X3: 3. [2, 3]. Yra panaudotas skaicius. 
+     495) --------I trejeta talpinamas X4: 4. [2, 4]. Yra panaudotas skaicius. 
+     496) --------I trejeta talpinamas X5: 5. [2, 5]. Yra panaudotas skaicius. 
+     497) --------I trejeta talpinamas X6: 6. [2, 6]. Gilyn. 
+     498) ---------I trejeta talpinamas X7: 7. [2, 6, 7]. Rasta. Atgal. 
+     499) -----I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     500) ------I trejeta talpinamas X7: 7. [1, 6, 7]. Netinkama suma.
+     501) ------I trejeta talpinamas X8: 8. [1, 6, 8]. Yra panaudotas skaicius.
+     502) ------I trejeta talpinamas X9: 9. [1, 6, 9]. Netinkama suma.
+     503) -----I trejeta talpinamas X7: 7. [1, 7]. Gilyn. 
+     504) ------I trejeta talpinamas X8: 8. [1, 7, 8]. Yra panaudotas skaicius.
+     505) ------I trejeta talpinamas X9: 9. [1, 7, 9]. Netinkama suma.
+     506) -----I trejeta talpinamas X8: 8. [1, 8]. Yra panaudotas skaicius. 
+     507) -----I trejeta talpinamas X9: 9. [1, 9]. Gilyn. 
+     508) ----I trejeta talpinamas X2: 2. [2]. Gilyn.
+     509) -----I trejeta talpinamas X3: 3. [2, 3]. Yra panaudotas skaicius. 
+     510) -----I trejeta talpinamas X4: 4. [2, 4]. Yra panaudotas skaicius. 
+     511) -----I trejeta talpinamas X5: 5. [2, 5]. Gilyn. 
+     512) ------I trejeta talpinamas X6: 6. [2, 5, 6]. Netinkama suma.
+     513) ------I trejeta talpinamas X7: 7. [2, 5, 7]. Netinkama suma.
+     514) ------I trejeta talpinamas X8: 8. [2, 5, 8]. Yra panaudotas skaicius.
+     515) ------I trejeta talpinamas X9: 9. [2, 5, 9]. Netinkama suma.
+     516) -----I trejeta talpinamas X6: 6. [2, 6]. Gilyn. 
+     517) ------I trejeta talpinamas X7: 7. [2, 6, 7]. Rasta. Gilyn. 
+     518) -------I trejeta talpinamas X1: 1. [1]. Gilyn.
+     519) --------I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     520) --------I trejeta talpinamas X3: 3. [1, 3]. Yra panaudotas skaicius. 
+     521) --------I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     522) --------I trejeta talpinamas X5: 5. [1, 5]. Gilyn. 
+     523) ---------I trejeta talpinamas X6: 6. [1, 5, 6]. Yra panaudotas skaicius.
+     524) ---------I trejeta talpinamas X7: 7. [1, 5, 7]. Yra panaudotas skaicius.
+     525) ---------I trejeta talpinamas X8: 8. [1, 5, 8]. Yra panaudotas skaicius.
+     526) ---------I trejeta talpinamas X9: 9. [1, 5, 9]. Rasta. Atgal. 
+     527) ------I trejeta talpinamas X8: 8. [2, 6, 8]. Yra panaudotas skaicius.
+     528) ------I trejeta talpinamas X9: 9. [2, 6, 9]. Netinkama suma.
+     529) -----I trejeta talpinamas X7: 7. [2, 7]. Gilyn. 
+     530) ------I trejeta talpinamas X8: 8. [2, 7, 8]. Yra panaudotas skaicius.
+     531) ------I trejeta talpinamas X9: 9. [2, 7, 9]. Netinkama suma.
+     532) -----I trejeta talpinamas X8: 8. [2, 8]. Yra panaudotas skaicius. 
+     533) -----I trejeta talpinamas X9: 9. [2, 9]. Gilyn. 
+     534) ----I trejeta talpinamas X3: 3. [3]. Yra panaudotas skaicius. 
+     535) ----I trejeta talpinamas X4: 4. [4]. Yra panaudotas skaicius. 
+     536) ----I trejeta talpinamas X5: 5. [5]. Gilyn.
+     537) -----I trejeta talpinamas X6: 6. [5, 6]. Gilyn. 
+     538) ------I trejeta talpinamas X7: 7. [5, 6, 7]. Netinkama suma.
+     539) ------I trejeta talpinamas X8: 8. [5, 6, 8]. Yra panaudotas skaicius.
+     540) ------I trejeta talpinamas X9: 9. [5, 6, 9]. Netinkama suma.
+     541) -----I trejeta talpinamas X7: 7. [5, 7]. Gilyn. 
+     542) ------I trejeta talpinamas X8: 8. [5, 7, 8]. Yra panaudotas skaicius.
+     543) ------I trejeta talpinamas X9: 9. [5, 7, 9]. Netinkama suma.
+     544) -----I trejeta talpinamas X8: 8. [5, 8]. Yra panaudotas skaicius. 
+     545) -----I trejeta talpinamas X9: 9. [5, 9]. Gilyn. 
+     546) ----I trejeta talpinamas X6: 6. [6]. Gilyn.
+     547) -----I trejeta talpinamas X7: 7. [6, 7]. Gilyn. 
+     548) ------I trejeta talpinamas X8: 8. [6, 7, 8]. Yra panaudotas skaicius.
+     549) ------I trejeta talpinamas X9: 9. [6, 7, 9]. Netinkama suma.
+     550) -----I trejeta talpinamas X8: 8. [6, 8]. Yra panaudotas skaicius. 
+     551) -----I trejeta talpinamas X9: 9. [6, 9]. Gilyn. 
+     552) ----I trejeta talpinamas X7: 7. [7]. Gilyn.
+     553) -----I trejeta talpinamas X8: 8. [7, 8]. Yra panaudotas skaicius. 
+     554) -----I trejeta talpinamas X9: 9. [7, 9]. Gilyn. 
+     555) ----I trejeta talpinamas X8: 8. [8]. Yra panaudotas skaicius. 
+     556) ----I trejeta talpinamas X9: 9. [9]. Gilyn.
+     557) ---I trejeta talpinamas X9: 9. [3, 4, 9]. Netinkama suma.
+     558) --I trejeta talpinamas X5: 5. [3, 5]. Gilyn. 
+     559) ---I trejeta talpinamas X6: 6. [3, 5, 6]. Netinkama suma.
+     560) ---I trejeta talpinamas X7: 7. [3, 5, 7]. Rasta. Gilyn. 
+     561) ----I trejeta talpinamas X1: 1. [1]. Gilyn.
+     562) -----I trejeta talpinamas X2: 2. [1, 2]. Gilyn. 
+     563) ------I trejeta talpinamas X3: 3. [1, 2, 3]. Yra panaudotas skaicius.
+     564) ------I trejeta talpinamas X4: 4. [1, 2, 4]. Netinkama suma.
+     565) ------I trejeta talpinamas X5: 5. [1, 2, 5]. Yra panaudotas skaicius.
+     566) ------I trejeta talpinamas X6: 6. [1, 2, 6]. Netinkama suma.
+     567) ------I trejeta talpinamas X7: 7. [1, 2, 7]. Yra panaudotas skaicius.
+     568) ------I trejeta talpinamas X8: 8. [1, 2, 8]. Netinkama suma.
+     569) ------I trejeta talpinamas X9: 9. [1, 2, 9]. Netinkama suma.
+     570) -----I trejeta talpinamas X3: 3. [1, 3]. Yra panaudotas skaicius. 
+     571) -----I trejeta talpinamas X4: 4. [1, 4]. Gilyn. 
+     572) ------I trejeta talpinamas X5: 5. [1, 4, 5]. Yra panaudotas skaicius.
+     573) ------I trejeta talpinamas X6: 6. [1, 4, 6]. Netinkama suma.
+     574) ------I trejeta talpinamas X7: 7. [1, 4, 7]. Yra panaudotas skaicius.
+     575) ------I trejeta talpinamas X8: 8. [1, 4, 8]. Netinkama suma.
+     576) ------I trejeta talpinamas X9: 9. [1, 4, 9]. Netinkama suma.
+     577) -----I trejeta talpinamas X5: 5. [1, 5]. Yra panaudotas skaicius. 
+     578) -----I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     579) ------I trejeta talpinamas X7: 7. [1, 6, 7]. Yra panaudotas skaicius.
+     580) ------I trejeta talpinamas X8: 8. [1, 6, 8]. Rasta. Gilyn. 
+     581) -------I trejeta talpinamas X1: 1. [1]. Yra panaudotas skaicius. 
+     582) -------I trejeta talpinamas X2: 2. [2]. Gilyn.
+     583) --------I trejeta talpinamas X3: 3. [2, 3]. Yra panaudotas skaicius. 
+     584) --------I trejeta talpinamas X4: 4. [2, 4]. Gilyn. 
+     585) ---------I trejeta talpinamas X5: 5. [2, 4, 5]. Yra panaudotas skaicius.
+     586) ---------I trejeta talpinamas X6: 6. [2, 4, 6]. Yra panaudotas skaicius.
+     587) ---------I trejeta talpinamas X7: 7. [2, 4, 7]. Yra panaudotas skaicius.
+     588) ---------I trejeta talpinamas X8: 8. [2, 4, 8]. Yra panaudotas skaicius.
+     589) ---------I trejeta talpinamas X9: 9. [2, 4, 9]. Rasta. Atgal. 
+     590) ------I trejeta talpinamas X9: 9. [1, 6, 9]. Netinkama suma.
+     591) -----I trejeta talpinamas X7: 7. [1, 7]. Yra panaudotas skaicius. 
+     592) -----I trejeta talpinamas X8: 8. [1, 8]. Gilyn. 
+     593) ------I trejeta talpinamas X9: 9. [1, 8, 9]. Netinkama suma.
+     594) -----I trejeta talpinamas X9: 9. [1, 9]. Gilyn. 
+     595) ----I trejeta talpinamas X2: 2. [2]. Gilyn.
+     596) -----I trejeta talpinamas X3: 3. [2, 3]. Yra panaudotas skaicius. 
+     597) -----I trejeta talpinamas X4: 4. [2, 4]. Gilyn. 
+     598) ------I trejeta talpinamas X5: 5. [2, 4, 5]. Yra panaudotas skaicius.
+     599) ------I trejeta talpinamas X6: 6. [2, 4, 6]. Netinkama suma.
+     600) ------I trejeta talpinamas X7: 7. [2, 4, 7]. Yra panaudotas skaicius.
+     601) ------I trejeta talpinamas X8: 8. [2, 4, 8]. Netinkama suma.
+     602) ------I trejeta talpinamas X9: 9. [2, 4, 9]. Rasta. Gilyn. 
+     603) -------I trejeta talpinamas X1: 1. [1]. Gilyn.
+     604) --------I trejeta talpinamas X2: 2. [1, 2]. Yra panaudotas skaicius. 
+     605) --------I trejeta talpinamas X3: 3. [1, 3]. Yra panaudotas skaicius. 
+     606) --------I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     607) --------I trejeta talpinamas X5: 5. [1, 5]. Yra panaudotas skaicius. 
+     608) --------I trejeta talpinamas X6: 6. [1, 6]. Gilyn. 
+     609) ---------I trejeta talpinamas X7: 7. [1, 6, 7]. Yra panaudotas skaicius.
+     610) ---------I trejeta talpinamas X8: 8. [1, 6, 8]. Rasta. Atgal. 
+     611) -----I trejeta talpinamas X5: 5. [2, 5]. Yra panaudotas skaicius. 
+     612) -----I trejeta talpinamas X6: 6. [2, 6]. Gilyn. 
+     613) ------I trejeta talpinamas X7: 7. [2, 6, 7]. Yra panaudotas skaicius.
+     614) ------I trejeta talpinamas X8: 8. [2, 6, 8]. Netinkama suma.
+     615) ------I trejeta talpinamas X9: 9. [2, 6, 9]. Netinkama suma.
+     616) -----I trejeta talpinamas X7: 7. [2, 7]. Yra panaudotas skaicius. 
+     617) -----I trejeta talpinamas X8: 8. [2, 8]. Gilyn. 
+     618) ------I trejeta talpinamas X9: 9. [2, 8, 9]. Netinkama suma.
+     619) -----I trejeta talpinamas X9: 9. [2, 9]. Gilyn. 
+     620) ----I trejeta talpinamas X3: 3. [3]. Yra panaudotas skaicius. 
+     621) ----I trejeta talpinamas X4: 4. [4]. Gilyn.
+     622) -----I trejeta talpinamas X5: 5. [4, 5]. Yra panaudotas skaicius. 
+     623) -----I trejeta talpinamas X6: 6. [4, 6]. Gilyn. 
+     624) ------I trejeta talpinamas X7: 7. [4, 6, 7]. Yra panaudotas skaicius.
+     625) ------I trejeta talpinamas X8: 8. [4, 6, 8]. Netinkama suma.
+     626) ------I trejeta talpinamas X9: 9. [4, 6, 9]. Netinkama suma.
+     627) -----I trejeta talpinamas X7: 7. [4, 7]. Yra panaudotas skaicius. 
+     628) -----I trejeta talpinamas X8: 8. [4, 8]. Gilyn. 
+     629) ------I trejeta talpinamas X9: 9. [4, 8, 9]. Netinkama suma.
+     630) -----I trejeta talpinamas X9: 9. [4, 9]. Gilyn. 
+     631) ----I trejeta talpinamas X5: 5. [5]. Yra panaudotas skaicius. 
+     632) ----I trejeta talpinamas X6: 6. [6]. Gilyn.
+     633) -----I trejeta talpinamas X7: 7. [6, 7]. Yra panaudotas skaicius. 
+     634) -----I trejeta talpinamas X8: 8. [6, 8]. Gilyn. 
+     635) ------I trejeta talpinamas X9: 9. [6, 8, 9]. Netinkama suma.
+     636) -----I trejeta talpinamas X9: 9. [6, 9]. Gilyn. 
+     637) ----I trejeta talpinamas X7: 7. [7]. Yra panaudotas skaicius. 
+     638) ----I trejeta talpinamas X8: 8. [8]. Gilyn.
+     639) -----I trejeta talpinamas X9: 9. [8, 9]. Gilyn. 
+     640) ----I trejeta talpinamas X9: 9. [9]. Gilyn.
+     641) ---I trejeta talpinamas X8: 8. [3, 5, 8]. Netinkama suma.
+     642) ---I trejeta talpinamas X9: 9. [3, 5, 9]. Netinkama suma.
+     643) --I trejeta talpinamas X6: 6. [3, 6]. Gilyn. 
+     644) ---I trejeta talpinamas X7: 7. [3, 6, 7]. Netinkama suma.
+     645) ---I trejeta talpinamas X8: 8. [3, 6, 8]. Netinkama suma.
+     646) ---I trejeta talpinamas X9: 9. [3, 6, 9]. Netinkama suma.
+     647) --I trejeta talpinamas X7: 7. [3, 7]. Gilyn. 
+     648) ---I trejeta talpinamas X8: 8. [3, 7, 8]. Netinkama suma.
+     649) ---I trejeta talpinamas X9: 9. [3, 7, 9]. Netinkama suma.
+     650) --I trejeta talpinamas X8: 8. [3, 8]. Gilyn. 
+     651) ---I trejeta talpinamas X9: 9. [3, 8, 9]. Netinkama suma.
+     652) --I trejeta talpinamas X9: 9. [3, 9]. Gilyn. 
+     653) -I trejeta talpinamas X4: 4. [4]. Gilyn.
+     654) --I trejeta talpinamas X5: 5. [4, 5]. Gilyn. 
+     655) ---I trejeta talpinamas X6: 6. [4, 5, 6]. Rasta. Gilyn. 
+     656) ----I trejeta talpinamas X1: 1. [1]. Gilyn.
+     657) -----I trejeta talpinamas X2: 2. [1, 2]. Gilyn. 
+     658) ------I trejeta talpinamas X3: 3. [1, 2, 3]. Netinkama suma.
+     659) ------I trejeta talpinamas X4: 4. [1, 2, 4]. Yra panaudotas skaicius.
+     660) ------I trejeta talpinamas X5: 5. [1, 2, 5]. Yra panaudotas skaicius.
+     661) ------I trejeta talpinamas X6: 6. [1, 2, 6]. Yra panaudotas skaicius.
+     662) ------I trejeta talpinamas X7: 7. [1, 2, 7]. Netinkama suma.
+     663) ------I trejeta talpinamas X8: 8. [1, 2, 8]. Netinkama suma.
+     664) ------I trejeta talpinamas X9: 9. [1, 2, 9]. Netinkama suma.
+     665) -----I trejeta talpinamas X3: 3. [1, 3]. Gilyn. 
+     666) ------I trejeta talpinamas X4: 4. [1, 3, 4]. Yra panaudotas skaicius.
+     667) ------I trejeta talpinamas X5: 5. [1, 3, 5]. Yra panaudotas skaicius.
+     668) ------I trejeta talpinamas X6: 6. [1, 3, 6]. Yra panaudotas skaicius.
+     669) ------I trejeta talpinamas X7: 7. [1, 3, 7]. Netinkama suma.
+     670) ------I trejeta talpinamas X8: 8. [1, 3, 8]. Netinkama suma.
+     671) ------I trejeta talpinamas X9: 9. [1, 3, 9]. Netinkama suma.
+     672) -----I trejeta talpinamas X4: 4. [1, 4]. Yra panaudotas skaicius. 
+     673) -----I trejeta talpinamas X5: 5. [1, 5]. Yra panaudotas skaicius. 
+     674) -----I trejeta talpinamas X6: 6. [1, 6]. Yra panaudotas skaicius. 
+     675) -----I trejeta talpinamas X7: 7. [1, 7]. Gilyn. 
+     676) ------I trejeta talpinamas X8: 8. [1, 7, 8]. Netinkama suma.
+     677) ------I trejeta talpinamas X9: 9. [1, 7, 9]. Netinkama suma.
+     678) -----I trejeta talpinamas X8: 8. [1, 8]. Gilyn. 
+     679) ------I trejeta talpinamas X9: 9. [1, 8, 9]. Netinkama suma.
+     680) -----I trejeta talpinamas X9: 9. [1, 9]. Gilyn. 
+     681) ----I trejeta talpinamas X2: 2. [2]. Gilyn.
+     682) -----I trejeta talpinamas X3: 3. [2, 3]. Gilyn. 
+     683) ------I trejeta talpinamas X4: 4. [2, 3, 4]. Yra panaudotas skaicius.
+     684) ------I trejeta talpinamas X5: 5. [2, 3, 5]. Yra panaudotas skaicius.
+     685) ------I trejeta talpinamas X6: 6. [2, 3, 6]. Yra panaudotas skaicius.
+     686) ------I trejeta talpinamas X7: 7. [2, 3, 7]. Netinkama suma.
+     687) ------I trejeta talpinamas X8: 8. [2, 3, 8]. Netinkama suma.
+     688) ------I trejeta talpinamas X9: 9. [2, 3, 9]. Netinkama suma.
+     689) -----I trejeta talpinamas X4: 4. [2, 4]. Yra panaudotas skaicius. 
+     690) -----I trejeta talpinamas X5: 5. [2, 5]. Yra panaudotas skaicius. 
+     691) -----I trejeta talpinamas X6: 6. [2, 6]. Yra panaudotas skaicius. 
+     692) -----I trejeta talpinamas X7: 7. [2, 7]. Gilyn. 
+     693) ------I trejeta talpinamas X8: 8. [2, 7, 8]. Netinkama suma.
+     694) ------I trejeta talpinamas X9: 9. [2, 7, 9]. Netinkama suma.
+     695) -----I trejeta talpinamas X8: 8. [2, 8]. Gilyn. 
+     696) ------I trejeta talpinamas X9: 9. [2, 8, 9]. Netinkama suma.
+     697) -----I trejeta talpinamas X9: 9. [2, 9]. Gilyn. 
+     698) ----I trejeta talpinamas X3: 3. [3]. Gilyn.
+     699) -----I trejeta talpinamas X4: 4. [3, 4]. Yra panaudotas skaicius. 
+     700) -----I trejeta talpinamas X5: 5. [3, 5]. Yra panaudotas skaicius. 
+     701) -----I trejeta talpinamas X6: 6. [3, 6]. Yra panaudotas skaicius. 
+     702) -----I trejeta talpinamas X7: 7. [3, 7]. Gilyn. 
+     703) ------I trejeta talpinamas X8: 8. [3, 7, 8]. Netinkama suma.
+     704) ------I trejeta talpinamas X9: 9. [3, 7, 9]. Netinkama suma.
+     705) -----I trejeta talpinamas X8: 8. [3, 8]. Gilyn. 
+     706) ------I trejeta talpinamas X9: 9. [3, 8, 9]. Netinkama suma.
+     707) -----I trejeta talpinamas X9: 9. [3, 9]. Gilyn. 
+     708) ----I trejeta talpinamas X4: 4. [4]. Yra panaudotas skaicius. 
+     709) ----I trejeta talpinamas X5: 5. [5]. Yra panaudotas skaicius. 
+     710) ----I trejeta talpinamas X6: 6. [6]. Yra panaudotas skaicius. 
+     711) ----I trejeta talpinamas X7: 7. [7]. Gilyn.
+     712) -----I trejeta talpinamas X8: 8. [7, 8]. Gilyn. 
+     713) ------I trejeta talpinamas X9: 9. [7, 8, 9]. Netinkama suma.
+     714) -----I trejeta talpinamas X9: 9. [7, 9]. Gilyn. 
+     715) ----I trejeta talpinamas X8: 8. [8]. Gilyn.
+     716) -----I trejeta talpinamas X9: 9. [8, 9]. Gilyn. 
+     717) ----I trejeta talpinamas X9: 9. [9]. Gilyn.
+     718) ---I trejeta talpinamas X7: 7. [4, 5, 7]. Netinkama suma.
+     719) ---I trejeta talpinamas X8: 8. [4, 5, 8]. Netinkama suma.
+     720) ---I trejeta talpinamas X9: 9. [4, 5, 9]. Netinkama suma.
+     721) --I trejeta talpinamas X6: 6. [4, 6]. Gilyn. 
+     722) ---I trejeta talpinamas X7: 7. [4, 6, 7]. Netinkama suma.
+     723) ---I trejeta talpinamas X8: 8. [4, 6, 8]. Netinkama suma.
+     724) ---I trejeta talpinamas X9: 9. [4, 6, 9]. Netinkama suma.
+     725) --I trejeta talpinamas X7: 7. [4, 7]. Gilyn. 
+     726) ---I trejeta talpinamas X8: 8. [4, 7, 8]. Netinkama suma.
+     727) ---I trejeta talpinamas X9: 9. [4, 7, 9]. Netinkama suma.
+     728) --I trejeta talpinamas X8: 8. [4, 8]. Gilyn. 
+     729) ---I trejeta talpinamas X9: 9. [4, 8, 9]. Netinkama suma.
+     730) --I trejeta talpinamas X9: 9. [4, 9]. Gilyn. 
+     731) -I trejeta talpinamas X5: 5. [5]. Gilyn.
+     732) --I trejeta talpinamas X6: 6. [5, 6]. Gilyn. 
+     733) ---I trejeta talpinamas X7: 7. [5, 6, 7]. Netinkama suma.
+     734) ---I trejeta talpinamas X8: 8. [5, 6, 8]. Netinkama suma.
+     735) ---I trejeta talpinamas X9: 9. [5, 6, 9]. Netinkama suma.
+     736) --I trejeta talpinamas X7: 7. [5, 7]. Gilyn. 
+     737) ---I trejeta talpinamas X8: 8. [5, 7, 8]. Netinkama suma.
+     738) ---I trejeta talpinamas X9: 9. [5, 7, 9]. Netinkama suma.
+     739) --I trejeta talpinamas X8: 8. [5, 8]. Gilyn. 
+     740) ---I trejeta talpinamas X9: 9. [5, 8, 9]. Netinkama suma.
+     741) --I trejeta talpinamas X9: 9. [5, 9]. Gilyn. 
+     742) -I trejeta talpinamas X6: 6. [6]. Gilyn.
+     743) --I trejeta talpinamas X7: 7. [6, 7]. Gilyn. 
+     744) ---I trejeta talpinamas X8: 8. [6, 7, 8]. Netinkama suma.
+     745) ---I trejeta talpinamas X9: 9. [6, 7, 9]. Netinkama suma.
+     746) --I trejeta talpinamas X8: 8. [6, 8]. Gilyn. 
+     747) ---I trejeta talpinamas X9: 9. [6, 8, 9]. Netinkama suma.
+     748) --I trejeta talpinamas X9: 9. [6, 9]. Gilyn. 
+     749) -I trejeta talpinamas X7: 7. [7]. Gilyn.
+     750) --I trejeta talpinamas X8: 8. [7, 8]. Gilyn. 
+     751) ---I trejeta talpinamas X9: 9. [7, 8, 9]. Netinkama suma.
+     752) --I trejeta talpinamas X9: 9. [7, 9]. Gilyn. 
+     753) -I trejeta talpinamas X8: 8. [8]. Gilyn.
+     754) --I trejeta talpinamas X9: 9. [8, 9]. Gilyn. 
+     755) -I trejeta talpinamas X9: 9. [9]. Gilyn.
+
+TRECIA DALIS. Rezultatai.
+Bandymu skaicius: 755.
+Kiekvieno trejeto suma yra lygi: 15.
+Sprendiniai: 
+
+Sprendinys: nr. 1:
+   s1 s5 s9 : 1 5 9
+   s2 s6 s7 : 2 6 7
+   s3 s4 s8 : 3 4 8
+Sprendinys: nr. 2:
+   s1 s5 s9 : 1 5 9
+   s3 s4 s8 : 3 4 8
+   s2 s6 s7 : 2 6 7
+Sprendinys: nr. 3:
+   s1 s6 s8 : 1 6 8
+   s2 s4 s9 : 2 4 9
+   s3 s5 s7 : 3 5 7
+Sprendinys: nr. 4:
+   s1 s6 s8 : 1 6 8
+   s3 s5 s7 : 3 5 7
+   s2 s4 s9 : 2 4 9
+Sprendinys: nr. 5:
+   s2 s4 s9 : 2 4 9
+   s1 s6 s8 : 1 6 8
+   s3 s5 s7 : 3 5 7
+Sprendinys: nr. 6:
+   s2 s4 s9 : 2 4 9
+   s3 s5 s7 : 3 5 7
+   s1 s6 s8 : 1 6 8
+Sprendinys: nr. 7:
+   s2 s6 s7 : 2 6 7
+   s1 s5 s9 : 1 5 9
+   s3 s4 s8 : 3 4 8
+Sprendinys: nr. 8:
+   s2 s6 s7 : 2 6 7
+   s3 s4 s8 : 3 4 8
+   s1 s5 s9 : 1 5 9
+Sprendinys: nr. 9:
+   s3 s4 s8 : 3 4 8
+   s1 s5 s9 : 1 5 9
+   s2 s6 s7 : 2 6 7
+Sprendinys: nr. 10:
+   s3 s4 s8 : 3 4 8
+   s2 s6 s7 : 2 6 7
+   s1 s5 s9 : 1 5 9
+Sprendinys: nr. 11:
+   s3 s5 s7 : 3 5 7
+   s1 s6 s8 : 1 6 8
+   s2 s4 s9 : 2 4 9
+Sprendinys: nr. 12:
+   s3 s5 s7 : 3 5 7
+   s2 s4 s9 : 2 4 9
+   s1 s6 s8 : 1 6 8
